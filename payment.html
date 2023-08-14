@@ -1,0 +1,199 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Scoop Villa - Payment Details</title>
+    <link rel="shortcut icon" href="Assets/logo.png" type="image/x-icon">
+    <link rel=" stylesheet" href="CSS/payment.css">
+</head>
+
+<body>
+    <div class="container">
+        <form action="" method="get">
+            <h1 class="main_heading">Order Details</h1>
+            <h2>User Information</h2>
+
+            <p>Order Id:</p>
+            <h2 id="code"></h2>
+            </p>
+            <p>
+                <label for="quantity">Quantity:</label> <br><br>
+                <input id="quantity" type="text" maxlength="3" placeholder="Quantity">
+            </p>
+            <p>Price:</p>
+            <input type="text" id="price" placeholder="Enter Price">
+            </p>
+
+            <p>Name:</p>
+            <p> <input type="text" placeholder="Enter Your Name" id="name">
+            </p>
+
+            <p> Email:</p>
+            <input type="email" placeholder="Enter Your Email" name="email" id="email">
+
+
+            <p>Pincode:</p>
+            <p>
+                <input type="text" placeholder="Pincode" maxlength="6" name="pin" id="pincode">
+            </p>
+
+
+            <h2>Payment information</h2>
+            <p>Card Type:</p>
+            <div class="card">
+                <img src="Assets/vi.jpg" height="40" width="60">
+                <img src="Assets/master.jpg" height="40" width="60">
+                <img src="Assets/rupay.jpg" height="40" width="60"><br>
+                <Select name="card type">
+                    <option value=" ">select a card type</option>
+                    <option value="visa" class="cardt">Visa</option>
+                    <option value="MasterCard " class="cardt">Master Card</option>
+                    <option value="rupay " class="cardt">Rupay</option>
+                </Select>
+            </div>
+
+            <div class="pay">
+                <p>
+                    <label for="cnn">Card Number :</label><br>
+                    <input id="cnn" type="tel" autocomplete="cc_number" maxlength="19"
+                        placeholder="   xxxx xxxx xxxx xxxx" name="card number">
+
+                </p>
+                <div class="cvv">
+                    <p>
+                        <label for="cvv">CVV:</label><br>
+                        <input id="cvv" type="tel" maxlength="3" name="cvv number">
+                    </p>
+                </div>
+                <div class="date">
+                    <p>
+                        Expiration:
+                    <div class="my">
+                        <select name="months" id="months">
+                            <option value="Months" selected disabled>Month</option>
+                            <option value="Jan">Jan</option>
+                            <option value="feb">Feb</option>
+                            <option value="mar">Mar</option>
+                            <option value="apr">Apr</option>
+                            <option value="may">May</option>
+                            <option value="jun">Jun</option>
+                            <option value="jul">Jul</option>
+                            <option value="aug">Aug</option>
+                            <option value="sep">Sep</option>
+                            <option value="oct">Oct</option>
+                            <option value="nov">Nov</option>
+                            <option value="dec">Dec</option>
+                        </select><br>
+                        <select name="years" id="years">
+                            <option value="Years" selected disabled>Year</option>
+                            <option value="30">30</option>
+                            <option value="29">29</option>
+                            <option value="28">28</option>
+                            <option value="27">27</option>
+                            <option value="26">26</option>
+                            <option value="25">25</option>
+                            <option value="24">24</option>
+                            <option value="23">23</option>
+                            <option value="22">22</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            </p>
+            <input type="button" value="proceed" class="pay_class" onclick="amount()">
+            </p>
+        </form>
+    </div>
+
+
+    <div class="confirm_order">
+        <form action="" method="POST" id="myfrm">
+            <fieldset>
+                <legend>Your Bill:</legend>
+                <center>
+                    <table border="1" style="padding: 20VH;border: 2px solid #db7093;">
+                        <div id="table">
+                            <tr>
+                                <th>Order Id</th>
+                                <th>Customer</th>
+                                <th>Email</th>
+                                <th>Pincode</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Total</th>
+                            </tr>
+                            <tr>
+                                <td id="o2"></td>
+                                <td id="n2"></td>
+                                <td id="e2"></td>
+                                <td id="p2"></td>
+                                <td id="pr2"></td>
+                                <td id="q2"></td>
+                                <td id="t2"></td>
+                            </tr>
+                        </div>
+                    </table>
+                </center>
+            </fieldset>
+        </form>
+    </div>
+    <p align="center">
+        <input type="button" onclick="print('myfrm')" class="pay_class" value="Print Bill">
+    </p>
+
+
+    <script>
+        function myPrint(myfrm) {
+            var printdata = document.getElementById(myfrm);
+            newwin = window.open("");
+            newwin.document.write(printdata.outerHTML);
+            newwin.print();
+            newwin.close();
+        }
+
+        const result = Math.random().toString(36).substring(2, 7);
+        document.getElementById("code").innerHTML = result;
+
+        document.getElementById("o2").innerHTML = result;
+        var name, code, email, price, pin, car, quantity, total;
+
+
+
+        document.getElementById("name").addEventListener("keyup", function () {
+            name = this.value;
+            document.getElementById("n2").innerHTML = name;
+        })
+
+        document.getElementById("email").addEventListener("keyup", function () {
+            email = this.value;
+            document.getElementById("e2").innerHTML = email;
+        })
+
+        document.getElementById("price").addEventListener("keyup", function () {
+            price = this.value;
+            document.getElementById("pr2").innerHTML = price;
+        })
+
+        document.getElementById("pincode").addEventListener("keyup", function () {
+            pin = this.value;
+            document.getElementById("p2").innerHTML = pin;
+        })
+
+        document.getElementById("quantity").addEventListener("keyup", function () {
+            quantity = this.value;
+            document.getElementById("q2").innerHTML = quantity;
+        })
+
+
+        function amount() {
+            var q = document.getElementById("quantity").value;
+            var p = document.getElementById("price").value;
+            total = p * q;
+            document.getElementById("t2").innerHTML = total;
+        }
+
+
+    </script>
+</body>
+
+</html>

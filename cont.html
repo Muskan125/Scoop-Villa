@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scoop Villa - Contact Us</title>
+    <link rel="shortcut icon" href="Assets/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, input, textarea{
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 2rem;
+    background-color: #f5ebf4;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form{
+    margin-top: 10vh;
+    scale: 1.2;
+    width: 50vw;
+    background-color: #f48ba9;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+}
+.contact-info{
+    background-color: #86cbed;
+    position: relative;
+}
+form{
+    padding: 2.3rem 2.2rem;
+    overflow: hidden;
+    position: relative;
+}
+.title{
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 1;
+    margin-bottom: 0.7rem;
+}
+.input-container{
+    position: relative;
+    margin: 1rem 0;
+}
+label{
+    display: none;
+}
+.input{
+    width: 100%;
+    outline: none;
+    border: 2px solid black;
+    background: #fadade;
+    padding: 0.6rem 1.2rem;
+    color: black;
+    font-weight: 500;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+textarea .input{
+    padding: 0.8rem 1.2rem;
+    min-height: 150px;
+    border-radius: 15px;
+    resize: none;
+    overflow-y: auto;
+}
+.btn{
+    padding: 0.6rem 1.3rem;
+    background-color: #fadade;
+    border: 2px solid black;
+    font-size: 0.95rem;
+    color: black;
+    line-height: 1;
+    border-radius: 25px;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 0;
+}
+.btn:hover{
+    background-color:transparent;
+    color: #fff;
+}
+.information{
+    margin: 0.7rem ;
+}
+.social-media{
+    padding: 2rem 0 0 0;
+}
+.social-media p{
+    color: black;
+}
+.title{
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 1;
+    margin-bottom: 0.7rem;
+}
+.padd-15{
+    padding: 45px;
+}
+.icons{
+    text-align: center;
+}
+.margin{
+    margin: 0;
+}
+.social-icons a{
+    color: black;
+    text-decoration: none;
+    margin-right: 6px;
+}
+.header{
+    border: 2px solid black;
+    border-radius: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 5vh;
+    align-items: center;
+    background-color: wheat;
+    justify-content: center;
+    transform: translateY(-40vh);
+    position: absolute;
+    display: flex;
+    width: 100vw;
+    height: 12vh;
+    margin: 5vh 0px;
+    z-index: 2;
+    box-shadow: 0 0px 20px rgba(0, 0, 0, 0.1);
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Contact Us</h1>
+        </div>
+        <div class="form">
+                        <div class="contact-form">
+                            <form action="cont.html">
+                                <h3 align="center" class="title">Send us a Message</h3>
+                                <div class="input-container">
+                                    <input type="text" name="name" class="input" placeholder="Enter your name" required>
+                                    <label for="">Name</label>
+                                </div>
+                                <div class="input-container">
+                                    <input type="email" name="email" class="input" placeholder="Enter your email" required>
+                                    <label for="">Email</label>
+                                </div>
+                                <div class="input-container">
+                                    <input type="tel" name="phone" class="input" placeholder="+91 12345 67890" required>
+                                    <label for="">Phone</label>
+                                </div>
+                                <div class="input-container textarea">
+                                   <textarea name="message" class="input" placeholder="Message" required></textarea>
+                                    <label for="">Message</label>
+                                </div>
+                                <input type="submit" value="Send" class="btn">
+                            </form>
+                </div>
+                <div class="contact-info">
+                    <h3 align="center" class="title padd-15">Reach Us</h3>
+                    <div class="info">
+                        <div class="information icons">
+                            <i class="margin fa-solid fa-location-dot"></i>
+                            <p>Phool Market, Thane - 400001</p>
+                        </div>
+                        <div class="information icons">
+                            <i class="margin fa-regular fa-envelope"></i>
+                            <p>support@scoopvilla.com</p>
+                        </div>
+                        <div class="information icons">
+                            <i class="margin fa-solid fa-phone"></i>
+                            <p>+91 12345 67890</p>
+                        </div>
+                    </div>
+                    <div class="social-media icons">
+                        <p>Connect with us :</p>
+                        <div class="social-icon">
+                            <a href="#">
+                                <i class="fa-brands fa-facebook"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>                            
+                            <a href="#">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa-brands fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

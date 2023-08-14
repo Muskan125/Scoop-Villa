@@ -1,0 +1,62 @@
+@keyframes offer {
+    0% {
+        transform: translate(0vw);
+    }
+
+    50% {
+        transform: translate(65vw);
+    }
+
+    100% {
+        transform: translate(0vw);
+    }
+}
+
+@keyframes logo {
+    from {
+        transform: translate(-20vh);
+    }
+
+    to {
+        transform: translate(0px);
+    }
+
+}
+
+@keyframes logo_rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(15deg);
+    }
+
+    50% {
+        transform: rotate(0deg);
+    }
+
+    75% {
+        transform: rotate(-20deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes slogan {
+    0% {
+        transform: translateY(0vh);
+    }
+
+    50% {
+        transform: translateY(-1vh);
+    }
+
+    100% {
+        transform: translateY(0vh);
+    }
+
+
+}
